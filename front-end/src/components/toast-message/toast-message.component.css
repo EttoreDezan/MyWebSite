@@ -1,0 +1,13 @@
+.toast-message-container {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  right: 20px;
+}
+
+@media (max-width: 850px) {
+  .toast-message-container {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
