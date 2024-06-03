@@ -1,0 +1,47 @@
+@if (isOpen) {
+  <div (click)="closeModal()"
+       id="default-modal" tabindex="-1" aria-hidden="true"
+       class="modal-container overflow-y-auto overflow-x-hidden
+      fixed top-0 right-0 left-0
+       w-full md:inset-0 h-[calc(100%-1rem)] max-h-full
+      flex items-center justify-center"
+       style="z-index: 1000">
+    <div class="relative p-4 w-full max-w-2xl max-h-full">
+      <div style="background-color: #100820" class="relative rounded-lg shadow">
+
+        <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
+          <h3 class="text-white text-xl font-semibold">
+            {{ projectSelected.title }}
+          </h3>
+          <button (click)="closeModal()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900
+        rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="default-modal">
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+        </div>
+        <img style="padding-right: 10%; padding-left: 10%; background-color: #100820" [src]="projectSelected.imageUrl"
+             alt="">
+        <div class="container-description rounded-b-2xl mt-2.5">
+          <div class="text-white p-4 md:p-5 space-y-4">
+            {{ projectSelected.description }}
+          </div>
+
+          <div class="flex items-center p-4 md:p-5 rounded-b">
+            <button (click)="closeModal()" class="message-button relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden
+             text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500
+              group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white focus:ring-4
+              focus:outline-none focus:ring-purple-200">
+              <span class="text-white relative px-5 py-2.5 transition-all ease-in duration-75 bg-[#8D4ADA]
+              rounded-md group-hover:bg-opacity-0">
+              Fechar
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+}

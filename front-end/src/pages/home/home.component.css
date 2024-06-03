@@ -1,0 +1,125 @@
+/*body description*/
+.container-body-description {
+  display: flex;
+  margin: 60px;
+}
+
+.container-description {
+  flex-shrink: 2;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
+.computer-icon {
+  flex-shrink: 2;
+
+}
+
+/*ABOUT*/
+
+.container-body-about {
+  display: flex;
+  margin: 60px;
+  padding: 40px;
+  background-color: #2C243B;
+  border-radius: 10px;
+}
+
+.body-about-description-image {
+  flex-shrink: 1;
+  margin-right: 40px;
+}
+.body-about-description-text {
+  flex-shrink: 2;
+}
+
+.computer-icon {
+  max-width: 300px;
+}
+
+.container-body-contact {
+  display: flex;
+  margin: 60px;
+  padding: 40px;
+  background-color: #2C243B;
+  border-radius: 10px;
+}
+
+.contact-container{
+  display: flex;
+}
+
+.contact-description{
+  flex: 1;
+}
+.message{
+  flex: 1;
+  margin-left: 5%;
+}
+
+@media (max-width: 850px) {
+  .container-body-description {
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .container-description {
+    margin-top: 60px;
+
+  }
+  .container-body-description {
+    flex-direction: column-reverse;
+  }
+  .computer-icon {
+    align-self: center;
+  }
+
+  .container-body-about {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 40px;
+
+  }
+  .body-about-description-image {
+    align-self: center;
+  }
+
+  .body-about-tecnologies-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .container-body-contact {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 40px;
+
+  }
+.contact-text-container{
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+}
+  .message{
+    margin-left: 0;
+  }
+
+}
+

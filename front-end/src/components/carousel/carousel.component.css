@@ -1,0 +1,52 @@
+
+:host {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.carousel-container {
+  display: flex;
+  justify-content: center;
+}
+.carousel-position {
+  position: relative;
+}
+
+.project-icons {
+  width: 60px;
+  height: 60px;
+}
+.img-carousel {
+  width: 100%;
+  height: auto;
+}
+.project-description-container {
+  width: 100%;
+  height: 100%;
+}
+
+.description-container {
+  padding: 1rem;
+  background-color: #2C243B;
+  border-radius: 10px 10px 0 0;
+  color: white;
+  overflow: auto;
+}
+
+.carousel-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0 0 10px 10px;
+}
+
+@media (max-width: 850px) {
+  .project-icons {
+    max-width: 25px;
+    max-height: 25px;
+  }
+}
+.project-details {
+  max-width: 600px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

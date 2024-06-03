@@ -1,0 +1,43 @@
+/* styles.css */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html, mat-toolbar, mat-toolbar button {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: inline;
+}
+
+.my-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #100820;
+}
+
+.my-container-large {
+  width: 1200px;
+  justify-content: center;
+  display: flex;
+}
+
+
+
+

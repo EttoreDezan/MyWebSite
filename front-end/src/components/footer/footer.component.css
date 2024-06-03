@@ -1,0 +1,9 @@
+.footer-comtainer {
+  padding: 20px;
+  background-color: #100820;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+}
