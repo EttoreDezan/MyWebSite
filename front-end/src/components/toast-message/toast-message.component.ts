@@ -1,4 +1,4 @@
-import {Component, ElementRef, EventEmitter, Input, Output} from '@angular/core';
+import {booleanAttribute, Component, ElementRef, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-toast-message',
@@ -8,7 +8,7 @@ import {Component, ElementRef, EventEmitter, Input, Output} from '@angular/core'
   styleUrl: './toast-message.component.css'
 })
 export class ToastMessageComponent {
-  @Input() isOpen: boolean = false;
+  @Input({transform: booleanAttribute}) isOpen: boolean = false;
   @Output() toastClose: EventEmitter<boolean> = new EventEmitter();
 
   closeToast() {

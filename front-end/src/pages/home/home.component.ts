@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {ModalComponent} from "../../components/modal/modal.component";
 import {FooterComponent} from "../../components/footer/footer.component";
 import {CarouselComponent} from "../../components/carousel/carousel.component";
+import {ToastMessageComponent} from "../../components/toast-message/toast-message.component";
+import {IProject} from "../../interfaces/iproject";
 
 @Component({
   selector: 'app-home',
@@ -10,7 +12,8 @@ import {CarouselComponent} from "../../components/carousel/carousel.component";
   imports: [
     ModalComponent,
     FooterComponent,
-    CarouselComponent
+    CarouselComponent,
+    ToastMessageComponent
   ],
   styleUrls: ['./home.component.css']
 })
@@ -38,4 +41,18 @@ export class HomeComponent {
       imageUrl: 'assets/images/projects-images/new/project-2-mt-saude-image.png'
     }
   ]
+
+  toastOpen:boolean = false;
+
+  openToast():void {
+    this.toastOpen = true;
+
+    setTimeout(()=>{
+      this.toastOpen = false;
+    }, 3000)
+  }
+
+  onToastClose(event: boolean): void {
+    this.toastOpen = event;
+  }
 }

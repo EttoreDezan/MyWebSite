@@ -15,6 +15,15 @@
 
 }
 
+.description-title {
+  font-size: 48px;
+}
+
+.description-subtitle {
+  font-size: 32px;
+}
+
+
 /*ABOUT*/
 
 .container-body-about {
@@ -65,6 +74,7 @@
   }
   .container-description {
     margin-top: 60px;
+    padding-right: 0;
 
   }
   .container-body-description {
@@ -72,6 +82,15 @@
   }
   .computer-icon {
     align-self: center;
+  }
+
+  .description-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .description-subtitle {
+    font-size: 24px;
   }
 
   .container-body-about {

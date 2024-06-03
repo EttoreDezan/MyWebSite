@@ -3,12 +3,10 @@
     <div class="my-container-large">
       <div class="container-body-description">
         <div class="container-description">
-          <h2 class="text-white">Olá, eu sou o Ettore</h2>
-          <h3 class="text-white">Desenvolvedor FullStack</h3>
-          <p class="text-white">
-            Com experiência em desenvolvimento Web, sou especialista em desenvolvimento de websites responsivos com
-            React
-            e Node.
+          <h2 class="description-title text-white">Olá, eu sou o Ettore</h2>
+          <h3 class="description-subtitle text-white">Desenvolvedor FullStack</h3>
+          <p class="text-white mt-2.5" style="text-align: justify">
+            Com experiência em desenvolvimento Web, sou especialista em desenvolvimento de websites responsivos com React e Node.
           </p>
         </div>
         <div class="computer-icon">
@@ -45,9 +43,11 @@
 
           </div>
 
-          <h2 style="color: #6AFF94">Sobre mim</h2>
-          <h3 class="text-white">Sou louco por programação, louco por novos desafios! *-*</h3>
-          <p class="text-white">Desde que me conheço por gente, admiro a vida das máquinas. Como poderímos viver sem
+          <h2 style="color: #6AFF94; margin-top: 10px">Sobre mim</h2>
+          <h3  style="text-align: justify; font-size: 24px; margin-top: 10px; margin-bottom: 10px " class="text-white">
+            Sou <i>louco</i> por programação, Sou <i>louco</i> por novos desafios! *-*
+          </h3>
+          <p style="text-align: justify" class="text-white">Desde que me conheço por gente, admiro a vida das máquinas. Como poderímos viver sem
             nossas melhores
             amigas?
             Neste mundo dependemos delas e elas dependem de nós. Hoje posso dizer, sou um mero iniciante nesse mundo da
@@ -65,11 +65,7 @@
 <section>
   <div class="my-container">
     <div class="my-container-large">
-
-
       <app-carousel [projects]="projects"></app-carousel>
-
-
     </div>
   </div>
 </section>
@@ -78,9 +74,7 @@
   <div class="my-container">
     <div class="my-container-large">
       <div class="container-body-contact">
-
         <div class="contact-container">
-
           <div class="contact-description">
             <div class="profile-image">
               <img src="../../assets/images/projects-images/profile-contact-image.svg" alt="Profile Image">
@@ -88,17 +82,35 @@
             <div class="contact-text-container">
               <p class="mt-5 mb-2.5" style="font-style: italic; color: #6AFF94;">Contato</p>
               <h3 class="mb-2.5" style="font-weight: bold; color: #fff">Para me encontrar?</h3>
-              <p style="color: #fff;">Sempre estou à disposição para conversar e ouvir sobre uma nova oportunidade!
+              <p style="color: #fff; text-align: justify">Sempre estou à disposição para conversar e ouvir sobre uma nova oportunidade!
                 Se quiserem, podem ser cobaia desse envio de menssagem &#123;&#123; API JAVA (em construção ;) &#123;&#123;</p>
             </div>
             <div class="mt-5">
-              <img src="../../assets/images/social-media/icon-git.svg" alt="Git Icon">
-              <img src="../../assets/images/social-media/icon-linkedin.svg" alt="Linkediin Icon">
-              <img src="../../assets/images/social-media/icon-whatsapp.svg" alt="Whatsapp Icon">
+              <ul style="display: flex;">
+                <li>
+                  <a href="https://github.com/EttoreDezan" target="_blank">
+                    <img width="64" height="64" src="../../assets/images/social-media/icon-git.svg" alt="Git Icon">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/ettore-dezan/" target="_blank">
+                    <img src="../../assets/images/social-media/icon-linkedin.svg" alt="Linkedin Icon">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wa.me/61999366676" target="_blank">
+                    <img src="../../assets/images/social-media/icon-whatsapp.svg" alt="Whatsapp Icon">
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
 
           <div class="message">
+            <app-toast-message
+              [isOpen]="toastOpen"
+              (toastClose)="onToastClose($event)"
+            />
             <label for="message" class="block mb-2 text-sm font-medium text-[#fff] dark:text-white"></label>
             <textarea id="message" rows="4" class="h-52 bg-[#171023] block p-2.5 w-full text-sm text-[#fff]
                   rounded-lg focus:ring-[#8D4ADA] focus:border-[#030205] dark:bg-gray-700 dark:border-gray-600
@@ -106,7 +118,7 @@
                       placeholder="Sua mensagem">
               </textarea>
             <div>
-              <button class="message-button mt-2.5 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden
+              <button (click)="openToast()" class="message-button mt-2.5 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden
              text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500
               group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4
               focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
