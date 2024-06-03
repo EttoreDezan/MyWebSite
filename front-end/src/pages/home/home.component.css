@@ -37,6 +37,7 @@
 .body-about-description-image {
   flex-shrink: 1;
   margin-right: 40px;
+  align-content: center;
 }
 .body-about-description-text {
   flex-shrink: 2;
