@@ -19,9 +19,18 @@ export class ModalComponent {
 
   constructor(private elementRef: ElementRef) { }
 
+  modalOpen: boolean = false;
+
   closeModal() {
     this.isOpen = false;
     this.modalClose.emit(false);
+  }
+
+  openModal(project: IProject) {
+    this.modalOpen = true;
+    this.projectSelected = project;
+
+    console.log('project selected ', this.projectSelected)
   }
 
 }

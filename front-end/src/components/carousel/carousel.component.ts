@@ -22,7 +22,10 @@ export class CarouselComponent {
     description: '',
     company: '',
     title: '',
-    jobPosition: ''
+    jobPosition: '',
+    gitHubLink: '',
+    designLink: '',
+    projectSiteLink: ''
   };
 
   modalOpen = false;
@@ -30,6 +33,8 @@ export class CarouselComponent {
   openModal(project: IProject) {
     this.modalOpen = true;
     this.projectSelected = project;
+
+    console.log('project selected ', this.projectSelected)
   }
 
   onModalClose(event: boolean): void {

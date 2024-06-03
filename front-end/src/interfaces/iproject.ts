@@ -4,5 +4,8 @@ export interface IProject {
   description: string;
   company: string;
   title: string;
-  jobPosition: string
+  jobPosition: string;
+  gitHubLink?: string;
+  projectSiteLink?: string;
+  designLink?: string;
 }

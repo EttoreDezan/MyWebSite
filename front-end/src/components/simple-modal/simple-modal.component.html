@@ -11,7 +11,7 @@
 
         <div class="flex items-center justify-between p-4 md:p-5 rounded-t">
           <h1 class="text-white text-xl font-semibold">
-            {{ projectSelected.title }}
+            {{ data.title }}
           </h1>
           <button (click)="closeModal()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900
         rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="default-modal">
@@ -22,35 +22,10 @@
             <span class="sr-only">Close modal</span>
           </button>
         </div>
-        <img style="padding-right: 10%; padding-left: 10%; background-color: #100820" [src]="projectSelected.imageUrl"
-             alt="">
         <div class="container-description rounded-b-2xl mt-2.5">
-          <h2 style="font-size: 18px; font-weight: bold" class="text-white ml-[20px] mr-[20px] mb-2.5">
-            {{ projectSelected.jobPosition }}
-          </h2>
-          <p [innerHTML]="projectSelected.description" class="text-white ml-[20px] mr-[20px] mb-2.5"
-             style="text-align: justify"></p>
-          <div>
-            <ul class="ml-5">
-              <li>
-                @if (projectSelected.gitHubLink) {
-                  <a [href]="projectSelected.gitHubLink" target="_blank">
-                    <img src="assets/images/social-media/icon-git.svg" alt="GitHub">
-                  </a>
-                }
-                @if (projectSelected.designLink) {
-                  <a [href]="projectSelected.designLink" target="_blank">
-                    <img src="assets/images/icons/icon-figma.svg" alt="GitHub">
-                  </a>
-                }
-                @if (projectSelected.projectSiteLink) {
-                  <a [href]="projectSelected.projectSiteLink" target="_blank">
-                    <img width="64px" height="64px" src="assets/images/icons/icon-developer.svg" alt="developer-site">
-                  </a>
-                }
-              </li>
-            </ul>
-          </div>
+          <p class="text-white ml-[20px] mr-[20px] mb-2.5" style="text-align: justify">
+            {{ data.description }}
+          </p>
 
           <div class="flex items-center p-4 md:p-5 rounded-b">
             <button (click)="closeModal()" class="message-button relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden
